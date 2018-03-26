@@ -1,0 +1,115 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "ZHR_VACATION_REPORT",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "Vacation Report",
+		"description": "Vacation Report",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZVACATION_REPORT_SRV": {
+				"uri": "/sap/opu/odata/sap/ZVACATION_REPORT_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZVACATION_REPORT_SRV/metadata.xml",
+					"annotations": [
+						"forVacationRecords"
+					]
+				}
+			},
+			"forVacationRecords": {
+				"type": "ODataAnnotation",
+				"uri": "forVacationRecords.xml",
+				"settings": {
+					"localUri": "forVacationRecords.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "ZHR_VACATION_REPORT.view.View1",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ZHR_VACATION_REPORT.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "ZVACATION_REPORT_SRV"
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"config": {
+			"sapFiori2Adaptation": {
+				"style": true,
+				"collapse": false,
+				"title": true,
+				"back": false,
+				"hierarchy": false
+			}
+		}		
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zhr_vacn_rept/webapp",
+		"_version": "1.1.0"
+	}
+}

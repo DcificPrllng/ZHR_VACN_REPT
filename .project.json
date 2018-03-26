@@ -1,0 +1,55 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "sap.watt.uitools.ide.web",
+    "com.watt.common.builder.sapui5clientbuild"
+  ],
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.32.0",
+      "dateTimeStamp": "Wed, 13 Jan 2016 12:56:36 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Fri, 23 Mar 2018 07:23:07 GMT"
+    },
+    {
+      "templateId": "wysiwygtemplate.quickStart",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Fri, 23 Mar 2018 07:12:53 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "dataBinding": {
+    "/webapp/view/View1.view.xml": {
+      "entitySet": "Entity1_Set"
+    }
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZVACATION_REPORT_SRV/",
+    "metadataFilePath": "localService/ZVACATION_REPORT_SRV/metadata.xml",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "deploy": {
+    "destination": "GWD",
+    "name": "ZHR_VACN_REPT"
+  },
+  "build": {
+    "buildRequired": true,
+    "sourceFolder": "webapp",
+    "targetFolder": "dist",
+    "excludedFolders": [],
+    "excludedFiles": [],
+    "lastBuildDateTime": "Mon, 26 Mar 2018 04:43:16 GMT"
+  }
+}

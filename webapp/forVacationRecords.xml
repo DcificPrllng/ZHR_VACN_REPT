@@ -37,10 +37,10 @@
 							<PropertyValue Property="Value" Path="QuotaName"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;quota}"/>
 						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Entitlement"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;entitlement}"/>
-						</Record>
+						<!--<Record Type="UI.DataField">-->
+						<!--	<PropertyValue Property="Value" Path="Entitlement"/>-->
+						<!--	<PropertyValue Property="Label" String="{@i18n&gt;entitlement}"/>-->
+						<!--</Record>-->
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="Used"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;used}"/>
@@ -50,9 +50,13 @@
 							<PropertyValue Property="Label" String="{@i18n&gt;remain}"/>
 						</Record>
 						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="AnnualEntitlement"/>
+							<PropertyValue Property="Label" String="Annual Entitlement"/>
+						</Record>
+						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="Unit"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;unit}"/>
-						</Record>
+						</Record>						
 					</Collection>
 				</Annotation>
 			</Annotations>

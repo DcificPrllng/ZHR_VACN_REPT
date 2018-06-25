@@ -45,11 +45,11 @@
     "name": "ZHR_VACN_REPT"
   },
   "build": {
-    "buildRequired": true,
+    "buildRequired": false,
     "sourceFolder": "webapp",
     "targetFolder": "dist",
     "excludedFolders": [],
     "excludedFiles": [],
-    "lastBuildDateTime": "Mon, 26 Mar 2018 04:43:16 GMT"
+    "lastBuildDateTime": "Wed, 02 May 2018 09:42:27 GMT"
   }
 }

@@ -106,7 +106,7 @@
 				"back": false,
 				"hierarchy": false
 			}
-		}		
+		}
 	},
 	"sap.platform.abap": {
 		"uri": "/sap/bc/ui5_ui5/sap/zhr_vacn_rept/webapp",

@@ -4,7 +4,7 @@
 	<semantic:FullscreenPage title="Vacation Report" showNavButton="true" navButtonPress="onNavButtonPress">
 		<semantic:content>
 			<smartTable:SmartTable id="LineItemsSmartTable" entitySet="QuotaRecords" tableType="ResponsiveTable" useExportToExcel="true" enableAutoBinding="true"
-				useTablePersonalisation="true" header="Absence Quotas" showRowCount="false"></smartTable:SmartTable>
+				useTablePersonalisation="false" header="Absence Quotas" showRowCount="false"></smartTable:SmartTable>
 		</semantic:content>
 	</semantic:FullscreenPage>
 </mvc:View>

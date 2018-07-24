@@ -1,10 +1,59 @@
 <mvc:View controllerName="ZHR_VACATION_REPORT.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.m.semantic" xmlns:smartTable="sap.ui.comp.smarttable" xmlns="sap.m" height="100%"
-	xmlns:core="sap.ui.core">
-	<semantic:FullscreenPage title="Vacation Report" showNavButton="true" navButtonPress="onNavButtonPress">
-		<semantic:content>
-			<smartTable:SmartTable id="LineItemsSmartTable" entitySet="QuotaRecords" tableType="ResponsiveTable" useExportToExcel="true" enableAutoBinding="true"
-				useTablePersonalisation="false" header="Absence Quotas" showRowCount="false"></smartTable:SmartTable>
-		</semantic:content>
-	</semantic:FullscreenPage>
+	xmlns:semantic="sap.m.semantic" xmlns:smartTable="sap.ui.comp.smarttable" xmlns="sap.m" height="100%" xmlns:core="sap.ui.core">
+	<!--<semantic:FullscreenPage title="Vacation Report" showNavButton="true" navButtonPress="onNavButtonPress">-->
+	<!--	<semantic:content>-->
+	<!--		<smartTable:SmartTable id="LineItemsSmartTable" entitySet="QuotaRecords" tableType="ResponsiveTable" useExportToExcel="true" enableAutoBinding="true"-->
+	<!--			useTablePersonalisation="false" header="Absence Quotas" showRowCount="false"></smartTable:SmartTable>-->
+	<!--	</semantic:content>-->
+	<!--</semantic:FullscreenPage>-->
+	<Page title="Vacation Report">
+		<Table items="{/QuotaRecords}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Absence Quotas" level="H2"/>
+						<ToolbarSpacer/>
+						<Button
+							tooltip="View MS Excel"
+							icon="sap-icon://excel-attachment"
+							press="handleExcelButtonPressed" />
+					</Toolbar>
+				</headerToolbar>
+			<columns>
+				<Column width="12em" minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Personnel Number"/>
+				</Column>
+				<Column>
+					<Text text="Name"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="Quota"/>
+				</Column>
+				<Column hAlign="Center">
+					<Text text="Used"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="Total Remaining"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="Annual Entitlement"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="Unit"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{PersonnelNumber}"/>
+						<Text text="{Name}"/>
+						<Text text="{QuotaName}"/>
+						<Text text="{Used}"/>
+						<Text text="{Remaining}"/>
+						<Text text="{AnnualEntitlement}"/>
+						<Text text="{Unit}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
 </mvc:View>

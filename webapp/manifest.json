@@ -101,7 +101,7 @@
 		"config": {
 			"sapFiori2Adaptation": {
 				"style": true,
-				"collapse": false,
+				"collapse": true,
 				"title": true,
 				"back": false,
 				"hierarchy": false
